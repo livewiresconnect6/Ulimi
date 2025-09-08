@@ -1,0 +1,97 @@
+~/workspace$ npm run build
+cp -r dist/* mobile-build/
+npx cap sync android
+npx cap open android
+
+> ulimi-web@1.0.0 build
+> node deployment-ready.js --build-only
+
+Creating deployment-ready configuration...
+Running deployment build...
+Building client...
+vite v5.4.19 building for production...
+✓ 2294 modules transformed.
+dist/public/index.html                                                            0.78 kB │ gzip:   0.48 kB
+dist/public/assets/Asset 18@100x-100_1749745258723-C0W4h8yq.jpg                  34.72 kB
+dist/public/assets/CutPaste_2023-03-05_17-37-28-115_1754699695574-BGWT00P_.png  114.82 kB
+dist/public/assets/Asset 17@100x-100_1749743298499-C2sU59uE.jpg                 273.28 kB
+dist/public/assets/index-Rho8_MJA.css                                            94.63 kB │ gzip:  15.23 kB
+dist/public/assets/index-DQhiEI81.js                                            884.20 kB │ gzip: 249.81 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 7.44s
+Building server...
+Building server with ESM support...
+
+  dist/index.js  193.3kb
+
+⚡ Done in 37ms
+✅ Server build completed successfully
+Deployment build complete!
+⠙ Copying web assets from mobile-build to android/app/src/main/assets/pub
+✔ Copying web assets from mobile-build to android/app/src/main/assets/public in 31.63ms
+✔ Creating capacitor.config.json in android/app/src/main/assets in 3.62ms
+✔ copy android in 118.66ms
+✔ Updating Android plugins in 19.92ms
+[info] Found 12 Capacitor plugins for android:
+       @capacitor/app@7.0.2
+       @capacitor/camera@7.0.2
+       @capacitor/device@7.0.2
+       @capacitor/filesystem@7.1.4
+       @capacitor/haptics@7.0.2
+       @capacitor/keyboard@7.0.2
+       @capacitor/network@7.0.2
+       @capacitor/preferences@7.0.2
+       @capacitor/push-notifications@7.0.2
+       @capacitor/share@7.0.2
+       @capacitor/splash-screen@7.0.2
+       @capacitor/status-bar@7.0.2
+✔ update android in 179.25ms
+[info] Sync finished in 0.404s
+
+Thank you for helping improve Capacitor by sharing anonymous usage data! 💖
+Information about the data we collect is available on our website: https://capacitorjs.com/docs/next/cli/telemetry
+You can disable telemetry at any time by using the npx cap telemetry off 
+[error] Unable to launch Android Studio. Is it installed?
+        Attempted to open Android Studio at:
+        /usr/local/android-studio/bin/studio.sh
+        You can configure this with the CAPACITOR_ANDROID_STUDIO_PATH
+        environment variable.
+~/workspace$ npx cap sync android
+npx cap open android
+⠙ Copying web assets from mobile-build to android/app/src/main/assets/pub
+✔ Copying web assets from mobile-build to android/app/src/main/assets/public in 18.28ms
+✔ Creating capacitor.config.json in android/app/src/main/assets in 1.31ms
+✔ copy android in 65.86ms
+✔ Updating Android plugins in 9.91ms
+[info] Found 12 Capacitor plugins for android:
+       @capacitor/app@7.0.2
+       @capacitor/camera@7.0.2
+       @capacitor/device@7.0.2
+       @capacitor/filesystem@7.1.4
+       @capacitor/haptics@7.0.2
+       @capacitor/keyboard@7.0.2
+       @capacitor/network@7.0.2
+       @capacitor/preferences@7.0.2
+       @capacitor/push-notifications@7.0.2
+       @capacitor/share@7.0.2
+       @capacitor/splash-screen@7.0.2
+       @capacitor/status-bar@7.0.2
+✔ update android in 95.50ms
+[info] Sync finished in 0.242s
+[error] Unable to launch Android Studio. Is it installed?
+        Attempted to open Android Studio at:
+        /usr/local/android-studio/bin/studio.sh
+        You can configure this with the CAPACITOR_ANDROID_STUDIO_PATH
+        environment variable.
+~/workspace$ npx cap open android
+[error] Unable to launch Android Studio. Is it installed?
+        Attempted to open Android Studio at:
+        /usr/local/android-studio/bin/studio.sh
+        You can configure this with the CAPACITOR_ANDROID_STUDIO_PATH
+        environment variable.
+~/workspace$ CAPACITOR_ANDROID_STUDIO_PATH
+bash: CAPACITOR_ANDROID_STUDIO_PATH: command not found

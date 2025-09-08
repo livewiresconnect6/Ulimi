@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Capacitor / Android / iOS build
+android/
+ios/
+build/
+dist/
+*.aab
+*.apk
+
+# Vercel
+.vercel/
+
+# Local system junk
+.local/
+.config/
+.vercel

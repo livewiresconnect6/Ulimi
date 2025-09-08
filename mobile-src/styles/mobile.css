@@ -1,0 +1,155 @@
+/* Mobile-specific styles for Ulimi app */
+
+.mobile-app {
+  /* Ensure full height on mobile */
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height */
+  
+  /* Prevent overscroll */
+  overscroll-behavior: none;
+  
+  /* Safe area handling for notched devices */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.app-content {
+  /* Account for bottom navigation */
+  padding-bottom: 4rem; /* 64px for navigation bar */
+  
+  /* Ensure content scrolls properly */
+  overflow-y: auto;
+  height: calc(100vh - 4rem);
+  height: calc(100dvh - 4rem);
+}
+
+.mobile-app.keyboard-open .app-content {
+  /* Adjust when keyboard is open */
+  height: auto;
+  max-height: calc(100vh - 4rem);
+  max-height: calc(100dvh - 4rem);
+}
+
+/* Touch-friendly button sizes */
+.mobile-button {
+  min-height: 44px; /* Apple's recommended touch target */
+  min-width: 44px;
+  padding: 12px 16px;
+}
+
+/* Improved scroll behavior */
+.mobile-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Prevent text selection on UI elements */
+.mobile-ui {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Touch feedback */
+.mobile-touch:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Mobile-optimized reading view */
+.mobile-reader {
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 100%;
+}
+
+/* Audio player mobile optimizations */
+.mobile-audio-player {
+  position: sticky;
+  bottom: 4rem; /* Above navigation */
+  z-index: 40;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.dark .mobile-audio-player {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* Loading states for mobile */
+.mobile-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+/* Responsive text sizing */
+@media (max-width: 320px) {
+  .mobile-reader {
+    font-size: 16px;
+    padding: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-reader {
+    font-size: 20px;
+    padding: 32px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+/* Handle landscape orientation */
+@media (orientation: landscape) and (max-height: 500px) {
+  .app-content {
+    height: calc(100vh - 3rem);
+    height: calc(100dvh - 3rem);
+  }
+  
+  .mobile-audio-player {
+    bottom: 3rem;
+  }
+  
+  nav {
+    height: 3rem;
+  }
+}
+
+/* Pull-to-refresh indicator */
+.ptr-indicator {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 0 0 12px 12px;
+  font-size: 14px;
+}
+
+/* Smooth transitions for mobile */
+.mobile-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+.mobile-focus:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Hide scrollbars on mobile for cleaner look */
+.mobile-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,62 @@
+<svg width="256" height="320" viewBox="0 0 256 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="patternGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0.6" />
+    </linearGradient>
+    <pattern id="africanPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <polygon points="20,5 35,20 20,35 5,20" fill="url(#patternGradient)" opacity="0.3"/>
+      <circle cx="20" cy="20" r="3" fill="#8B4513" opacity="0.4"/>
+    </pattern>
+  </defs>
+  
+  <!-- Book background -->
+  <rect x="0" y="0" width="256" height="320" fill="url(#bookGradient)" rx="16"/>
+  
+  <!-- African pattern overlay -->
+  <rect x="0" y="0" width="256" height="320" fill="url(#africanPattern)" rx="16"/>
+  
+  <!-- Border -->
+  <rect x="8" y="8" width="240" height="304" fill="none" stroke="#8B4513" stroke-width="3" rx="12"/>
+  
+  <!-- Title area -->
+  <rect x="32" y="80" width="192" height="160" fill="rgba(139, 69, 19, 0.1)" rx="8"/>
+  
+  <!-- Title text -->
+  <text x="128" y="140" font-family="serif" font-size="42" font-weight="bold" text-anchor="middle" fill="#8B4513">ULIMI</text>
+  
+  <!-- Subtitle -->
+  <text x="128" y="170" font-family="serif" font-size="14" text-anchor="middle" fill="#A0522D">Stories from the Heart of Africa</text>
+  
+  <!-- Decorative line -->
+  <line x1="64" y1="190" x2="192" y2="190" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- African-inspired symbols -->
+  <g transform="translate(128, 220)">
+    <!-- Sun symbol -->
+    <circle cx="0" cy="0" r="16" fill="#FFD700" opacity="0.8"/>
+    <g stroke="#8B4513" stroke-width="2" opacity="0.6">
+      <line x1="-24" y1="0" x2="-20" y2="0"/>
+      <line x1="20" y1="0" x2="24" y2="0"/>
+      <line x1="0" y1="-24" x2="0" y2="-20"/>
+      <line x1="0" y1="20" x2="0" y2="24"/>
+      <line x1="-17" y1="-17" x2="-14" y2="-14"/>
+      <line x1="14" y1="14" x2="17" y2="17"/>
+      <line x1="17" y1="-17" x2="14" y2="-14"/>
+      <line x1="-14" y1="14" x2="-17" y2="17"/>
+    </g>
+  </g>
+  
+  <!-- Bottom decorative elements -->
+  <g transform="translate(64, 280)">
+    <polygon points="0,0 8,8 0,16 -8,8" fill="#D2691E" opacity="0.6"/>
+  </g>
+  <g transform="translate(192, 280)">
+    <polygon points="0,0 8,8 0,16 -8,8" fill="#D2691E" opacity="0.6"/>
+  </g>
+</svg>

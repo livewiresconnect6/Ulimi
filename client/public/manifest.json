@@ -1,0 +1,50 @@
+{
+  "name": "Ulimi - Stories & Audiobooks",
+  "short_name": "Ulimi",
+  "description": "Discover and listen to African stories in multiple languages",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#3b82f6",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait",
+  "scope": "/",
+  "id": "com.ulimi.app",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["books", "education"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Ulimi home screen"
+    }
+  ],
+  "prefer_related_applications": false,
+  "iarc_rating_id": "AAAA0001",
+  "related_applications": [],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}
